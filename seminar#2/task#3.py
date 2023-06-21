@@ -3,7 +3,7 @@
 k = 0
 N = int(input("N: "))
 
-while 2**k < N:
+while 2**k <= N:
     print(2**k, end=' ')
     k += 1
 print()
