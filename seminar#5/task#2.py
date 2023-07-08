@@ -10,8 +10,6 @@
 def sum_func(a, b):
     if not b:
         return a
-    a += 1
-    b -= 1
-    return sum_func(a, b)
+    return sum_func(a+1, b-1)
 
 print(sum_func(7, 6))
