@@ -3,11 +3,17 @@
 # Пользователь вводит 2 числа. n — кол-во элементов первого множества. m — кол-во элементов второго множества. 
 # Затем пользователь вводит сами элементы множеств.
 
-list1 = list2 = []
+list1, list2 = [], []
 
 n = int(input('n: '))
 m = int(input('m: '))
-for i in range(n): list1.append(int(input(f'list1 {i}: ')))
-for i in range(m): list2.append(int(input(f'list2 {i}: ')))
 
+print('list1')
+for i in range(n): list1.append(int(input(f'{i+1}: ')))
+print('list2')
+for i in range(m): list2.append(int(input(f'{i+1}: ')))
 
+res = list(set(list1).intersection(set(list2)))
+res.sort()
+
+print(res)
